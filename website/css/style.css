@@ -4,7 +4,7 @@ html {
 body { 
 	position:absolute; 
 	top:0; bottom:0; right:0; left:0; 
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("background.jpg");
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../img/background.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -18,6 +18,12 @@ body {
 	padding-top:150px;
 	padding-bottom: 30px;
 	}  /* must be same height as the footer */
+#room {
+	margin-top: 115px;
+	margin-left:150px;
+	margin-right:150px;
+	text-align: center;
+}
 
 .form-box{
 	width: 380px;
@@ -36,7 +42,6 @@ body {
 	box-shadow: 0 0 20px 9px #ff61241f;
 	border-radius: 30px;
 }
-
 .toggle-btn{
 	padding:10px 30px;
 	cursor: pointer;
@@ -48,7 +53,6 @@ body {
 	font-weight: bold;
 	font-style: italic;
 }
-
 #btn{
 	top:0;
 	left: 0;

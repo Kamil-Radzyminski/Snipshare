@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="EN">
+<link href="css/main_style.css" rel="stylesheet" type="text/css">
+  <head>
+
+		<meta charset="UTF-8">
+		<title>Room Creator</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="main">
+        <div class="form-box">
+          <div class="button-box">
+            <button id="post-btn" type="submit" class="room-btn">Create room</button>            
+          </div>
+          <div id="room">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+    Created by M.A.K. Group: &nbsp;&nbsp; Marcin Gasiewicz, Artur Jałocha, Kamil Radzymiński
+    </div>
+  </body>
+  <script type="text/javascript">
+  const button = document.getElementById('post-btn');
+
+  button.addEventListener('click', async _ => 
+  {
+  try {     
+      var request = new XMLHttpRequest();
+      request.onreadystatechange = function()
+      {
+        if (this.readyState == 4 && this.status == 200) 
+        {
+            var resp = JSON.parse(this.responseText);
+            var respcut = resp.roomname;
+            document.getElementById("room").innerHTML = respcut;
+        }
+      };
+    
+    request.open('POST', 'http://margasiewicz.pythonanywhere.com/room', true);
+    request.send();
+    } 
+    catch(err) 
+    {
+    console.error(`Error: ${err}`);
+    }
+  });
+  </script>
+</html>
