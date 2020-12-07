@@ -11,8 +11,8 @@
       <div id="main">
         <div class="form-box">
           <div class="button-box">
-            <button id="post-btn" type="submit" class="room-btn" title="Limit to one click per minute" onclick="clickTimeLimit();">Create room</button>
-            <span id="error"></span>            
+            <button id="post-btn" type="submit" class="room-btn" title="Limited to one room creation per minute" onclick="clickTimeLimit();">Create room <span id = "timer"></span></button>
+                        
           </div>
           <div id="room">
           </div>
@@ -52,21 +52,25 @@
   <script>
   function clickTimeLimit()
   {
-    var error = document.getElementById("error") 
-    if(document.getElementById("post-btn").disabled==true)
-    {
-
-            error.textContent = "Room can be created once per minute" 
-            error.style.color = "red"
-    }
-    document.getElementById("post-btn").textContent = "Disabled for 60s";
+    document.getElementById("post-btn").textContent = "Disabled for: ";
     document.getElementById("post-btn").style.background = "grey";
     document.getElementById("post-btn").disabled = true;
     setTimeout('document.getElementById("post-btn").style.background="#8B0000"',60000);
     setTimeout('document.getElementById("post-btn").disabled=false;',60000);
     setTimeout('document.getElementById("post-btn").textContent = "Create room"',60000);
 
-
+    var txt = "Disabled for: ";
+    var sec = 59;
+    var intervalId = setInterval(myTimer, 1000);
+    function myTimer()
+    {
+      document.getElementById("post-btn").innerHTML = txt + sec;
+      sec--;
+      if(sec == 0)
+      {
+        clearInterval(intervalId);
+      }
+    }
   }
 </script>
 </html>
