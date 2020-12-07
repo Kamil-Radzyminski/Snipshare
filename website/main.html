@@ -11,7 +11,7 @@
       <div id="main">
         <div class="form-box">
           <div class="button-box">
-            <button id="post-btn" type="submit" class="room-btn">Create room</button>            
+            <button id="post-btn" type="submit" class="room-btn" title="Limit to one click per minute" onclick="clickTimeLimit();">Create room</button>            
           </div>
           <div id="room">
           </div>
@@ -48,4 +48,14 @@
     }
   });
   </script>
+  <script>
+  function clickTimeLimit()
+  {
+
+    document.getElementById("post-btn").disabled=true;
+    setTimeout('document.getElementById("post-btn").disabled=false;',60000);
+
+
+  }
+</script>
 </html>

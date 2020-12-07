@@ -72,3 +72,14 @@ body {
 	height: 30px;
 	clear:both;
 } 
+room-btn:hover:after {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    width: 100%;
+    content: attr(title);
+    background-color: #ffa;
+    color: #000;
+    line-height: 1.4em;
+    border: 1px solid #000;
+}
