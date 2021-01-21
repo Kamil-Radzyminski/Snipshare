@@ -15,7 +15,7 @@ body {
 }
 #main {
 	overflow:auto;
-	padding-top:150px;
+	padding-top:30px;
 	padding-bottom: 30px;
 	}  /* must be same height as the footer */
 #room {
@@ -26,10 +26,10 @@ body {
 }
 
 .form-box{
-	width: 380px;
-	height:380px;
+	width: 700px;
+	height:700px;
 	position: relative;
-	margin: 6% auto;
+	margin: 2% auto;
 	background: transparent;
 	padding: 5px;
 	overflow: hidden;
@@ -126,3 +126,35 @@ span{
 	height: 30px;
 	clear:both;
 } 
+
+
+section{
+	width:100%;
+	height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.accordion-item{
+	background-color: #283042;
+	border-radius: .4rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	box-shadow: .5rem 2px .5rem rgba(0,0,0,.9);
+}
+
+
+.accordion-link{
+	font-size: 1.4rem;
+	color: rgba(255,255,255,.8);
+	text-decoration: none;
+	background-color: #283042;
+	width:100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
