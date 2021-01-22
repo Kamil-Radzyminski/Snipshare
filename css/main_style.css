@@ -28,6 +28,28 @@ body {
 	font-style: bold;
 	color: #DAA520;
 }
+.faq-box{
+	width:125px;
+	height: 25px;
+	position: relative;
+	font-size: 17px;
+	color: #F4A460;
+	font-weight: bold;
+	border-style: solid;
+	border-color: black;
+	background-color: #8B0000;
+}
+.download-box{
+	width:125px;
+	height: 25px;
+	position: relative;
+	font-size: 17px;
+	color: #F4A460;
+	font-weight: bold;
+	border-style: solid;
+	border-color: black;
+	background-color: #8B0000;
+}
 .form-box{
 	width: 350px;
 	height:150px;
